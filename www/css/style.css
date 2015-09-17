@@ -1,0 +1,64 @@
+/* Empty. Add your own CSS if you like */
+
+/*Template*/
+.content-padding {
+  padding: 15px;
+}
+.scroll-view{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.bg-blue {
+	background-color: #005989 !important
+}
+.bg-pink {
+  background-color: #e05168!important
+}
+.border-dark {
+  border: 2px solid #333 !important;
+}
+.center{
+  	display: table-cell;
+  	vertical-align: middle;
+  	text-align: center;
+}
+.standard-padding {
+	padding: 15px;
+}
+.clear {
+  clear: both
+}
+.bar-header {
+  background-color: rgba(0,89,137, 0.7);
+}
+.title {
+  color: white
+}
+.button-icon {
+  color: white !important;
+}
+.button-clear {
+  font-size: 30px !important;
+}
+
+/*Home*/
+
+.h-row-top {
+  height: 45%
+}
+.h-row-mid {
+  height: 10%
+}
+.h-row-bottom {
+  height: 45%
+}
+.h-logo {
+  margin-left: auto; margin-right: auto; left: 0; right: 0;
+}
+
+/*Contact*/
+
+.angular-google-map-container { height: 300px; background-color: #c3c3c3 }
