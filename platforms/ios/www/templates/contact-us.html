@@ -1,0 +1,19 @@
+<ion-view view-title="Contact Us">
+	<ion-content class="content-padding" has-bouncing="true">
+		<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+			<ui-gmap-marker coords="marker.coords" click="onClick()" options="marker.options" events="marker.events" idkey="marker.id">
+				<ui-gmap-window options="windowOptions" closeClick="closeClick()">
+					<div>{{windowTitle}}</div>
+				</ui-gmap-window>
+        	</ui-gmap-marker>
+		</ui-gmap-google-map>
+		<br>
+		<h3 align="center"><b><u>Contact Details</u></b></h3>
+		<br>
+		<p>
+			<b>Phone:</b><br> (086) 133 5551<br><br>
+			<b>Fax:</b><br> (0866) 689 112<br><br>
+			<b>Email:</b><br> web@prosperosa.co.za 
+		</p>
+	</ion-content>
+</ion-view>
