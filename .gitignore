@@ -2,9 +2,5 @@
 # http://git-scm.com/docs/gitignore
 
 node_modules/
-<<<<<<< HEAD
-# platforms/
-=======
 platforms/
->>>>>>> 741f29688948a7482e5ae75d74504972645a004d
 plugins/
