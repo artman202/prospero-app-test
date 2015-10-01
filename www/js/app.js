@@ -15,6 +15,9 @@ angular.module('starter', ['ionic', 'ui.router', 'proportalControllers', 'uiGmap
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+    initPushwoosh();
+
   });
 
 })

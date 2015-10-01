@@ -33,6 +33,31 @@
     <!-- ngCordova -->
     <script src="lib/ngCordova/dist/ng-cordova.js"></script>
 
+    <!-- pushwoosh -->
+    <script src="js/pushwoosh-android.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+
+        function initPushwoosh() {
+            
+            var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
+
+            if(device.platform == "Android") {
+                
+                registerPushwooshAndroid();
+
+            } else if(device.platform == "iPhone" || device.platform == "iOS")
+            {
+
+                registerPushwooshIOS();
+
+            }
+
+        }
+
+   </script>
+
   </head>
   <body ng-app="starter">
     <ion-nav-bar class="bar">
