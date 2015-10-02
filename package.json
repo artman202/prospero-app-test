@@ -15,11 +15,36 @@
     "shelljs": "^0.3.0"
   },
   "cordovaPlugins": [
-    "cordova-plugin-device",
-    "cordova-plugin-console",
     "cordova-plugin-whitelist",
-    "cordova-plugin-splashscreen",
-    "com.ionic.keyboard"
+    "cordova-plugin-geolocation",
+    {
+      "locator": "https://github.com/Pushwoosh/pushwoosh-phonegap-3.0-plugin.git",
+      "id": "com.pushwoosh.plugins.pushwoosh"
+    },
+    "ionic-plugin-keyboard",
+    "cordova-plugin-device",
+    "cordova-plugin-keyboard"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [
+    {
+      "platform": "android",
+      "version": "",
+      "locator": "android"
+    },
+    {
+      "platform": "blackberry10",
+      "version": "",
+      "locator": "blackberry10"
+    },
+    {
+      "platform": "ios",
+      "version": "",
+      "locator": "ios"
+    },
+    {
+      "platform": "windows",
+      "version": "",
+      "locator": "windows"
+    }
+  ]
 }
