@@ -35,25 +35,34 @@
 
     <!-- pushwoosh -->
     <script src="js/pushwoosh-android.js"></script>
-    <script src="js/index.js"></script>
 
     <script>
 
         function initPushwoosh() {
-            
+
             var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
 
-            if(device.platform == "Android") {
-                
+            if (device.platform == "Android") {
                 registerPushwooshAndroid();
-
-            } else if(device.platform == "iPhone" || device.platform == "iOS")
-            {
-
-                registerPushwooshIOS();
-
             }
 
+            if (device.platform == "iPhone" || device.platform == "iOS") {
+                registerPushwooshIOS();
+            }
+
+            if (device.platform == "Win32NT") {
+                registerPushwooshWP();
+            }
+
+            pushNotification.getLaunchNotification(
+                function(notification) {
+                    if (notification != null) {
+                        alert(JSON.stringify(notification));
+                    } else {
+                        alert("No launch notification");
+                    }
+                }
+            );
         }
 
    </script>
@@ -64,7 +73,7 @@
       <ion-nav-back-button class="button-clear">
         <i class="ion-ios-arrow-thin-left button-icon"></i>
       </ion-nav-back-button>
-    </ion-nav-bar>
+    </ion-nav-bar>    
     <ion-nav-view>
         <ion-view class="template-view"></ion-view>
     </ion-nav-view>

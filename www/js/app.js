@@ -9,8 +9,11 @@ angular.module('starter', ['ionic', 'ui.router', 'proportalControllers', 'uiGmap
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    if (device.platform == "Android" || device.platform == "iPhone" || device.platform == "iOS")
+    {
+      if(window.cordova && window.cordova.plugins.Keyboard) {
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+      }
     }
     if(window.StatusBar) {
       StatusBar.styleDefault();
@@ -22,7 +25,7 @@ angular.module('starter', ['ionic', 'ui.router', 'proportalControllers', 'uiGmap
 
 })
 
-.config(function($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider) {
+.config(function($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider, $compileProvider) {
 
   uiGmapGoogleMapApiProvider.configure({
     //    key: 'your api key',
@@ -54,4 +57,6 @@ angular.module('starter', ['ionic', 'ui.router', 'proportalControllers', 'uiGmap
       controller: "ContactCtrl"
     })
 
+  $compileProvider.imgSrcSanitizationWhitelist('img/');
+  
 })

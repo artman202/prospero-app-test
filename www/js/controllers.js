@@ -5,7 +5,7 @@ angular.module('proportalControllers', [])
 }])
 
 .controller('AboutCtrl', ['$scope', function($scope){
-	
+  
 }])
 
 .controller('ContactCtrl', ['$scope', 'uiGmapGoogleMapApi', '$cordovaGeolocation', function($scope, uiGmapGoogleMapApi, $cordovaGeolocation){
