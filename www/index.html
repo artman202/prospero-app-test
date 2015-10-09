@@ -35,10 +35,8 @@
 
     <!-- pushwoosh -->
     <script src="js/pushwoosh-android.js"></script>
-<<<<<<< HEAD
+    <script src="js/pushwoosh-ios.js"></script>
 
-=======
->>>>>>> ce6f90b66213f0fc38723105f4c1ef782ecac0ac
     <script>
 
         function initPushwoosh() {
@@ -57,15 +55,16 @@
                 registerPushwooshWP();
             }
 
-            pushNotification.getLaunchNotification(
-                function(notification) {
-                    if (notification != null) {
-                        alert(JSON.stringify(notification));
-                    } else {
-                        alert("No launch notification");
-                    }
-                }
-            );
+            // pushNotification.getLaunchNotification(
+            //     function(notification) {
+            //         if (notification != null) {
+            //             // JSON.stringify(notification;
+            //             alert(notification);
+            //         } else {
+            //             // alert("No launch notification");
+            //         }
+            //     }
+            // );
         }
 
    </script>

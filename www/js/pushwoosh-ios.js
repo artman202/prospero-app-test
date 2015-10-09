@@ -6,16 +6,25 @@ function registerPushwooshIOS() {
     document.addEventListener('push-notification', function(event) {
                                 //get the notification payload
                                 var notification = event.notification;
- 
-                                //display alert to the user for example
-                                alert(notification.aps.alert);
+
+                                function alertDismissed() {
+                                    // do something
+                                }
+
+                                // alert(notification.aps.alert);
+                                navigator.notification.alert(
+                                    notification.aps.alert,  // message
+                                    alertDismissed,         // callback
+                                    'Alert',            // title
+                                    'Done'                  // buttonName
+                                );
                                
                                 //clear the app badge
                                 pushNotification.setApplicationIconBadgeNumber(0);
                             });
  
     //initialize the plugin
-    pushNotification.onDeviceReady({pw_appid:"PUSHWOOSH_APP_ID"});
+    pushNotification.onDeviceReady({pw_appid:"8784F-8D699"});
      
     //register for pushes
     pushNotification.registerDevice(

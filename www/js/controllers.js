@@ -1,7 +1,7 @@
 angular.module('proportalControllers', [])
 
-.controller('HomeCtrl', ['$scope', function($scope){
-	$scope.imagePath = "img/logo.png"
+.controller('HomeCtrl', ['$scope', function($scope, $cordovaDialogs){
+	$scope.imagePath = "img/logo.png";
 }])
 
 .controller('AboutCtrl', ['$scope', function($scope){
