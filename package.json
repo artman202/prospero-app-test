@@ -24,7 +24,8 @@
     "ionic-plugin-keyboard",
     "cordova-plugin-device",
     "cordova-plugin-keyboard",
-    "cordova-plugin-dialogs"
+    "cordova-plugin-dialogs",
+    "cordova-plugin-splashscreen"
   ],
   "cordovaPlatforms": [
     {
