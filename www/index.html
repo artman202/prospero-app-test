@@ -9,6 +9,8 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+    <script src="js/winstore-jscompat.js"></script>
+
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
@@ -36,36 +38,37 @@
     <!-- pushwoosh -->
     <script src="js/pushwoosh-android.js"></script>
     <script src="js/pushwoosh-ios.js"></script>
+    <script src="js/pushwoosh-windows.js"></script>
 
     <script>
 
-        function initPushwoosh() {
+    function initPush() {
 
-            var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
+        var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
 
-            if (device.platform == "Android") {
-                registerPushwooshAndroid();
-            }
-
-            if (device.platform == "iPhone" || device.platform == "iOS") {
-                registerPushwooshIOS();
-            }
-
-            if (device.platform == "Win32NT") {
-                registerPushwooshWP();
-            }
-
-            // pushNotification.getLaunchNotification(
-            //     function(notification) {
-            //         if (notification != null) {
-            //             // JSON.stringify(notification;
-            //             alert(notification);
-            //         } else {
-            //             // alert("No launch notification");
-            //         }
-            //     }
-            // );
+        if (device.platform == "Android") {
+            registerPushwooshAndroid();
         }
+
+        if (device.platform == "iPhone" || device.platform == "iOS") {
+            registerPushwooshIOS();
+        }
+
+        if (device.platform == "Win32NT" || device.platform == "windows" || device.platform == "windows8") {
+            registerPushwooshWP();
+        }
+
+        // pushNotification.getLaunchNotification(
+        //     function(notification) {
+        //         if (notification != null) {
+        //             // JSON.stringify(notification;
+        //             alert(notification);
+        //         } else {
+        //             // alert("No launch notification");
+        //         }
+        //     }
+        // );
+    }
 
    </script>
 

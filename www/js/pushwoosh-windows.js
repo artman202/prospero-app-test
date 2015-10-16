@@ -6,9 +6,20 @@ function registerPushwooshWP() {
     document.addEventListener('push-notification', function(event) {
                 //get the notification payload
                 var notification = event.notification;
- 
-                //display alert to the user for example
-                alert(JSON.stringify(notification));
+
+                var title = event.notification.content;
+
+                function alertDismissed() {
+                    // do something
+                }
+
+                // alert(notification.aps.alert);
+                navigator.notification.alert(
+                    title,  // message
+                    alertDismissed,         // callback
+                    'Alert',            // title
+                    'Done'                  // buttonName
+                );
     });
  
     //initialize the plugin

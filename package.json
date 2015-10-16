@@ -47,6 +47,11 @@
       "platform": "windows",
       "version": "",
       "locator": "windows"
+    },
+    {
+      "platform": "wp8",
+      "version": "",
+      "locator": "wp8"
     }
   ]
 }

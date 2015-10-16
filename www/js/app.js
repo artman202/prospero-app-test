@@ -19,7 +19,7 @@ angular.module('starter', ['ionic', 'ui.router', 'proportalControllers', 'uiGmap
       StatusBar.styleDefault();
     }
 
-    initPushwoosh();
+    initPush();
 
   });
 
